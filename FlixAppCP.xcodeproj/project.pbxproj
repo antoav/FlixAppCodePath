@@ -16,6 +16,7 @@
 		A8BAEEA127C2E3C10078D44E /* FlixAppCPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAEEA027C2E3C10078D44E /* FlixAppCPTests.swift */; };
 		A8BAEEAB27C2E3C10078D44E /* FlixAppCPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAEEAA27C2E3C10078D44E /* FlixAppCPUITests.swift */; };
 		A8BAEEAD27C2E3C10078D44E /* FlixAppCPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAEEAC27C2E3C10078D44E /* FlixAppCPUITestsLaunchTests.swift */; };
+		A8BAEEBD27C4710F0078D44E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAEEBC27C4710F0078D44E /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A8BAEEA627C2E3C10078D44E /* FlixAppCPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixAppCPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BAEEAA27C2E3C10078D44E /* FlixAppCPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixAppCPUITests.swift; sourceTree = "<group>"; };
 		A8BAEEAC27C2E3C10078D44E /* FlixAppCPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixAppCPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8BAEEBC27C4710F0078D44E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		A8BAEE8827C2E3BF0078D44E /* FlixAppCP */ = {
 			isa = PBXGroup;
 			children = (
+				A8BAEEBC27C4710F0078D44E /* MovieTableViewCell.swift */,
 				A8BAEE8927C2E3BF0078D44E /* AppDelegate.swift */,
 				A8BAEE8B27C2E3BF0078D44E /* SceneDelegate.swift */,
 				A8BAEE8D27C2E3BF0078D44E /* ViewController.swift */,
@@ -260,6 +263,7 @@
 			files = (
 				A8BAEE8E27C2E3BF0078D44E /* ViewController.swift in Sources */,
 				A8BAEE8A27C2E3BF0078D44E /* AppDelegate.swift in Sources */,
+				A8BAEEBD27C4710F0078D44E /* MovieTableViewCell.swift in Sources */,
 				A8BAEE8C27C2E3BF0078D44E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +443,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37ST8GB59T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlixAppCP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +471,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37ST8GB59T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlixAppCP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
