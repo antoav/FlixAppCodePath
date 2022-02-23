@@ -20,9 +20,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
-`TODO://` Add the URL to your animated app walkthough `gif` in the image tag below, `YOUR_GIF_URL_HERE`. Make sure the gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after after adding gif)
-
-<img src="https://i.imgur.com/rwgY2ER.mp4" width=250><br>
+<img src="https://i.imgur.com/rwgY2ER.jpg" width=250><br>
 
 ### Notes
 Initially I came across a lot of bugs from not having connected elements properly and just trying to understand how all files interacted with the storyboard. After overcoming those I was able to follow all instructions pretty seamlessly.  
