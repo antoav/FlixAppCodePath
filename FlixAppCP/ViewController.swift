@@ -11,16 +11,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     
     @IBOutlet weak var movieTableView: UITableView!
+    private var movies = [Movie]() {
+        didSet {
+            movieTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         movieTableView.dataSource = self
         movieTableView.delegate = self
+        MovieService.shared.fetchMovies{ movies in
+            self.movies = movies
+            print("done")
+            print(movies)
+            
+        }
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -32,6 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         else {
             return UITableViewCell()
         }
+        cell.configure(with: movies[indexPath.row])
         return cell
     }
 
