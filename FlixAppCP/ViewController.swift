@@ -23,9 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         movieTableView.delegate = self
         MovieService.shared.fetchMovies{ movies in
             self.movies = movies
-            print("done")
-            print(movies)
-            
         }
         
     }

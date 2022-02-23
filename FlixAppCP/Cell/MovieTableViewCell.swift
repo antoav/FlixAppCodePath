@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieTableViewCell: UITableViewCell {
 
@@ -20,5 +21,7 @@ class MovieTableViewCell: UITableViewCell {
         let baseURL = "https://image.tmdb.org/t/p/w185"
         let posterPath = movie.moviePosterSubPath;
         let posterURL = URL(string: baseURL + posterPath)
+        moviePoster.af_setImage(withURL: posterURL!)
+        
     }
 }
