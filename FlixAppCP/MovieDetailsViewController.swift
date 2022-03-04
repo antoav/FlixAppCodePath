@@ -9,14 +9,29 @@ import UIKit
 
 class MovieDetailsViewController: UIViewController {
 
-    var movie: [String:Movie]!
+    var movie: Movie!
     
+    @IBOutlet weak var backdropImageView: UIImageView!
+    @IBOutlet weak var posterImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        titleLabel.text = movie.name
+        descriptionLabel.text = movie.description
+        let baseURL = "https://image.tmdb.org/t/p/w185"
+        let posterPath = movie.moviePosterSubPath;
+        let posterURL = URL(string: baseURL + posterPath)
+        //moviePoster.text = movie.posterURL
+        backdropImageView.af_setImage(withURL: posterURL!)
+        posterImageView.af_setImage(withURL: posterURL!)
+        
         // Do any additional setup after loading the view.
-//        print(movie["title"])
+       
     }
     
 

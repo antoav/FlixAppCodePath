@@ -53,9 +53,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let movie = movies[indexPath.row]
         
         //pass selected movie to the details view controller
-//        let detailsViewController = segue.destination as! MovieDetailsViewController
-//        detailsViewController.movie = movie
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
         
+        movieTableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
