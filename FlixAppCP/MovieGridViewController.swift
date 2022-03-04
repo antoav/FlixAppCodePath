@@ -18,7 +18,14 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let url = URL(string: "https://api.themoviedb.org/3/movie/297762/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 4
+        layout.minimumInteritemSpacing = 4
+        let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2 )/3
+        layout.itemSize = CGSize(width: width, height: width * 3/2)
+        
+        let url = URL(string: "https://api.themoviedb.org/3/movie/634649/similar?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -28,15 +35,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
              } else if let data = data {
                     let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                  self.movies = dataDictionary["results"] as! [[String: Any]]
-//                 var movies = [Movie]()
-//                 for rawData in moviesRawData {
-//                     let movie = Movie(name: rawData["original_title"] as! String,
-//                                       description: rawData["overview"] as! String,
-//                                       moviePosterSubPath: rawData["poster_path"] as! String,
-//                                       backdropPath: rawData["backdrop_path"] as! String)
-                     
-//                     movies.append(movie)
-//                 }
+
                  self.collectionView.reloadData()
                  print(self.movies)
              }
