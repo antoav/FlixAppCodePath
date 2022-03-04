@@ -11,4 +11,5 @@ struct  Movie {
     let name: String
     let description: String
     let moviePosterSubPath: String
+    let backdropPath: String
 }

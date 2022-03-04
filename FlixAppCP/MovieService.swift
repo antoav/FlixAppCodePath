@@ -24,7 +24,8 @@ class MovieService {
                  for rawData in moviesRawData {
                      let movie = Movie(name: rawData["original_title"] as! String,
                                        description: rawData["overview"] as! String,
-                                       moviePosterSubPath: rawData["poster_path"] as! String)
+                                       moviePosterSubPath: rawData["poster_path"] as! String,
+                                       backdropPath: rawData["backdrop_path"] as! String)
                      
                      movies.append(movie)
                  }

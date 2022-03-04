@@ -55,7 +55,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //pass selected movie to the details view controller
         let detailsViewController = segue.destination as! MovieDetailsViewController
         detailsViewController.movie = movie
-        
         movieTableView.deselectRow(at: indexPath, animated: true)
     }
 }
